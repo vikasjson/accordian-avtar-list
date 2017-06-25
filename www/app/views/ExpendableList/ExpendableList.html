@@ -1,0 +1,37 @@
+<ion-view view-title="Expendable List" positive>
+  <ion-content>
+    <ion-list>
+      <div ng-repeat="group in groups">
+        <div class="list" style="margin-bottom: 0px;padding-bottom: 0px">
+          <a class="item item-avatar" href="#" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+            <img ng-src="img/user.png">
+            <h2>Venkman</h2>
+            <p>Back off, man. I'm a scientist.</p>
+          </a>
+        </div>
+        <ion-item class="item-accordion"
+                  ng-show="isGroupShown(group)" style="background-color: #e2554d;padding:0px;">
+          <div class="row" style="padding: 0px;">
+            <div class="col">
+              <button style="z-index: 9999;font-size: 34px; border-radius: 10px 0 0 10px;;width: 100%;color: #ffffff !important;border-color: #e2554d !important;background-color: #e2554d;" class="button button-outline icon-center ion-ios-telephone button-positive">
+              </button>
+              <p style="text-align: center;color: #ffffff">Call 911</p>
+            </div>
+            <div class="col">
+              <button style="z-index: 9999;font-size: 34px;width: 100%;color: #ffffff !important;border-color: #e2554d !important;background-color: #e2554d;" class="button button-outline icon-center ion-unlocked button-positive" >
+              </button>
+              <p style="text-align: center;color: #ffffff">Plans</p>
+            </div>
+            <div class="col">
+              <button style="z-index: 9999;font-size: 34px;width: 100%;color: #ffffff !important;border-color: #e2554d !important;background-color: #e2554d;" class="button button-outline icon-center ion-person button-positive">
+              </button>
+              <p style="text-align: center;color: #ffffff">Profile</p>
+            </div>
+          </div>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar bar-assertive">
+  </ion-footer-bar>
+</ion-view>
